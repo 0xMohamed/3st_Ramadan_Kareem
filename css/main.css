@@ -1,0 +1,233 @@
+body {
+    font-family: Helvetica;
+}
+
+.all {
+    background-color: #FFF;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 0 80px 0;
+}
+
+.mosque {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: 600px;
+    animation: fase_in 1s linear forwards;
+    animation-delay: 1.8s;
+    opacity: 0;
+}
+
+.navbar .navbar-brand {
+    font-size: 32px;
+    font-weight: 700;
+    color: #EC638A;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.navbar .navbar-nav {
+    font-size: 22px;
+}
+
+.navbar .navbar-nav li:not(:last-child) {
+    margin: 0 2px;
+}
+
+.navbar .navbar-nav .nav-item a {
+    padding: 6px 20px;
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: calc(0.2s * var(--i));
+    opacity: 0;
+}
+
+.navbar .navbar-nav li {
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: calc(0.5s);
+    opacity: 0;
+}
+
+.navbar .navbar-nav li.active, 
+.navbar .navbar-nav li:hover {
+    background-color: #0266AF;
+    border-radius: 24px;
+}
+
+
+.navbar .navbar-nav li.active a,
+.navbar .navbar-nav li:hover a {
+    color: #FFF;
+}
+
+.navbar .navbar-nav .nav-link {
+    font-weight: 500;
+    color: #0266AF;
+}
+
+.navbar button i {
+    color: #EC638A;
+    font-size: 30px;
+}
+
+
+/* End Navbar */
+
+/* Start Content */
+
+
+.content .set {
+    max-width: 50%;
+    position: relative;
+}
+
+.content h2 {
+    margin-top: 25%;
+    text-transform: capitalize;
+    font-size: 3.5em;
+    color: #0266AF;
+    line-height: 1.1;
+    font-weight: 500;
+    animation: slide_right 0.5s linear forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.content p {
+    color: #BA2B7C;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 0.8s;
+    opacity: 0;
+}
+
+.content button {
+    background-color: #E85582;
+    color: #FFF;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: 0.9s;
+    opacity: 0;
+}
+
+.content button:hover {
+    background-color: #F94481;
+}
+
+.sci {
+    position: absolute;
+    bottom: 40px;       
+}
+
+.sci li {
+    display: inline-block;
+}
+
+.sci li a {
+    font-size: 26px;
+    background-color: #0266AF;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+    color: #FFF;
+    transition: all 0.2s ease-in-out;
+    margin: 0 2px;
+    box-shadow: 0px 5px 10px 0px #7d96a8;
+    animation: slide_right 0.5s linear forwards;
+    animation-delay: calc(0.2s * var(--i));
+    opacity: 0;
+}
+
+.sci li a:hover {
+    background-color: #E85582;
+    transform: translateY(-10px);
+}
+
+
+
+@media (max-width: 1000px) {
+    .mosque {
+        max-width: 400px;
+        opacity: 90%;
+    }
+    
+    .content .set {
+        max-width: 100%;
+        position: relative;
+    }
+}
+
+@media (max-width: 450px) {
+    .mosque {
+        max-width: 300px;
+        opacity: 50%;
+    }
+    
+}
+
+@media (max-width: 991px) {
+    .navbar .navbar-nav li:not(:last-child) {
+        margin: 5px 0px;
+    }
+    .sci {
+        bottom: 0px;       
+    }
+    
+}
+
+/* Animedted */
+
+@keyframes slide_left {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_top {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_right {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fase_in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
+
